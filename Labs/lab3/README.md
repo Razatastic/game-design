@@ -34,4 +34,4 @@ This assignment is worth 5 points:
   a deduction of points for not satisfying constraints.)
 - 1 point for creativity and balance and overall creating a nice game
 
-### 1
+###
