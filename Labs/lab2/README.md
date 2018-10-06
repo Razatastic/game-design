@@ -12,9 +12,7 @@ Modify your program so that it can behave differently based on different inputs 
 &nbsp;
 # 2 Drawing Curves (3 points)
 ## 2.1 - Go through the Processing tutorial on Drawing Curves
-```
 http://www.processing.org/learning/curves/
-```
 ## 2.2 - Draw 4 colored circles with a spline curve between 2 of them
 Create a program in Processing that randomly selects coordinates for 4 points within the size of the Processing display window. Draw a filled circle around each point with a radius of at least 5 pixels. Each circle should be a different color. Draw a spline curve between two of the points.
 ###### HINT: Use the size() function, the width and height variables, and the random() function. (1 point this part)
