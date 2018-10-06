@@ -21,20 +21,14 @@ http://nskyc.com/
 ## 1.3 - Create a program in Processing that loads an image and computes the average color over all the pixels in
 the image. Create a second image where all the pixels are set to the average color (like on NSKY!). Have
 the program display the original image first, and then when the user presses any key or clicks the mouse,
-show the averaged image. Have the program toggle between the original image and the averaged image.
-```
-(1 point this part)
-```
+show the averaged image. Have the program toggle between the original image and the averaged image. (1 point this part)
 ## 1.4 - Modify your program so that it can behave differently based on different inputs by the user. For example, if
-
-```
 the user pressesAora, show the averaged image; if the user pressesBorb, show the original image tinted
 blue; if the user pressesGorg, show the original image tinted green; if the user pressesRorr, show the
 original image tinted red; if the user pressesYory, show the original image tinted yellow; and if the user
 pressesOoro, show the original image again.
-HINT:use thetint()function.
-(1 point this part)
-```
+
+HINT:use thetint()function. (1 point this part)
 # 2 Drawing Curves(3 points)
 
 ## 2.1 - Go through the Processing tutorial onDrawing Curves:
