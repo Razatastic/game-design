@@ -9,16 +9,16 @@ Create a program in Processing that loads an image and computes the average colo
 ###### (1 point this part)
 ## 1.4 - Add keyboard input support
 Modify your program so that it can behave differently based on different inputs by the user. For example, if the user presses A or a, show the averaged image; if the user presses B or b, show the original image tinted blue; if the user presses G or g, show the original image tinted green; if the user presses R or r, show the original image tinted red; if the user presses Y or y, show the original image tinted yellow; and if the user presses O or o, show the original image again. 
-##### HINT: Use the tint() function. (1 point this part)
+###### HINT: Use the tint() function. (1 point this part)
 &nbsp;
-# 2 Drawing Curves(3 points)
+# 2 Drawing Curves (3 points)
 ## 2.1 - Go through the Processing tutorial on Drawing Curves:
 ```
 http://www.processing.org/learning/curves/
 ```
 ## 2.2 - Draw 4 colored circles with a spline curve between 2 of them
 Create a program in Processing that randomly selects coordinates for 4 points within the size of the Processing display window. Draw a filled circle around each point with a radius of at least 5 pixels. Each circle should be a different color. Draw a spline curve between two of the points.
-##### HINT: Use the size() function, the width and height variables, and the random() function. (1 point this part)
+###### HINT: Use the size() function, the width and height variables, and the random() function. (1 point this part)
 ## 2.3 - Modify your program in two ways: 
 1. When the mouse is pressed on any point, it changes color (e.g. turns yellow)
 2. When the user presses any key, the program toggles between drawing a black curved line on a white background and drawing a white curved line on a black background
