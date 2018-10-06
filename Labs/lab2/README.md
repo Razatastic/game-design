@@ -2,7 +2,7 @@
 
 ## Lab 2
 
-# 1 - Images and Pixels (2 points)
+## 1 - Images and Pixels (2 points)
 
 ## 1.1 - Go through the Processing tutorial on Images and Pixels:
 ```
