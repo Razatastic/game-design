@@ -1,6 +1,6 @@
-## CISC 3665, Fall 2018
+# CISC 3665, Fall 2018
 
-## Lab 2
+# Lab 2
 
 # Instructions
 
