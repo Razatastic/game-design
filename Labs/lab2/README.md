@@ -1,8 +1,8 @@
 # Lab 2
 ## 1 - Images and Pixels (2 points)
-## 1.1 - Go through the Processing tutorial on Images and Pixels:
+## 1.1 - Go through the Processing tutorial on Images and Pixels
 #### http://www.processing.org/learning/pixels/
-## 1.2 - Visit the NSKY web site:
+## 1.2 - Visit the NSKY web site
 #### http://nskyc.com/
 ## 1.3 - Compute average color
 Create a program in Processing that loads an image and computes the average color over all the pixels in the image. Create a second image where all the pixels are set to the average color (like on NSKY!). Have the program display the original image first, and then when the user presses any key or clicks the mouse, show the averaged image. Have the program toggle between the original image and the averaged image. 
@@ -12,7 +12,7 @@ Modify your program so that it can behave differently based on different inputs 
 ###### HINT: Use the tint() function. (1 point this part)
 &nbsp;
 # 2 Drawing Curves (3 points)
-## 2.1 - Go through the Processing tutorial on Drawing Curves:
+## 2.1 - Go through the Processing tutorial on Drawing Curves
 ```
 http://www.processing.org/learning/curves/
 ```
