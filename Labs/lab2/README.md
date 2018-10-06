@@ -21,8 +21,8 @@ Create a program in Processing that randomly selects coordinates for 4 points wi
 ##### HINT:use the size() function, the width and height variables, and the random() function. (1 point this part)
 ## 2.3 - 
 Modify your program in two ways: 
-* (1) when the mouse is pressed on any point, it changes color (e.g. turns yellow)
-* (2) when the user presses any key, the program toggles between drawing a black curved line on a white background and drawing a white curved line on a black background.
+1. When the mouse is pressed on any point, it changes color (e.g. turns yellow)
+2. When the user presses any key, the program toggles between drawing a black curved line on a white background and drawing a white curved line on a black background.
 ###### (1 point this part)
 
 ## 2.4 - 
