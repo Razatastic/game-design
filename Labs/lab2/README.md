@@ -4,7 +4,7 @@
 
 # Instructions
 
-This assignment will be handed in, together with the next lab assignment. Submission directions will be given
+######This assignment will be handed in, together with the next lab assignment. Submission directions will be given
 together with Lab 3.
 
 # 1 - Images and Pixels (2 points)
