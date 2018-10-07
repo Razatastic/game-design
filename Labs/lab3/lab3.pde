@@ -14,12 +14,17 @@ void draw() {
   for (int i = 0; i < balls.length; i++) {
     balls[i].draw();
   }
+  
+  fill(0, 50, 255);
+  textSize(20);
+  text("Score: " + scoreCounter, 50, 50);
 }
 
 void mouseReleased() {  // Mark setClicked to true on mouseRelease
   for (Ball b : balls) {
-    if (dist(mouseX, mouseY, b.x, b.y) < b.r) {
+    if (dist(mouseX, mouseY, b.x, b.y) < b.r/2) {
       b.setClicked();
+      scoreCounter++;
     }
   }
 }
@@ -31,7 +36,7 @@ class Ball {
 
   Ball() {
     // Randomly setting values for a ball object's properties
-    this.r = random(25, 75);
+    this.r = random(30, 100);
     this.x = random(width);
     this.y = random(height);
     this.yspeed = random(1, 3);
