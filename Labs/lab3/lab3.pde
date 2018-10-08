@@ -1,22 +1,23 @@
-int ballCount = 5;  // Number of ball objects to be made //<>// //<>// //<>//
+int ballCount = 5;  // Number of ball objects to be made //<>//
 Ball[] balls = new Ball[ballCount];  // Array of Ball objects
-float minSpeed = 0.8, maxSpeed = 2.8;  // Speed range of ball drop //<>//
+float minSpeed = 0.8, maxSpeed = 2.8;  // Speed range of ball drop
 int scoreCounter = 0;  // Score tracker
 int lives = 3; // Number of live players has
-int backgroundColor = 255;  // Background color tracker
+color backgroundColor = color(0);  // Background color tracker
 boolean gameState = false;  // Boolean that determines whether or not game is running
 
 void setup() {
   fullScreen();
   background(backgroundColor);
-  for (int i = 0; i < balls.length; i++) {  //Create ball objects
+  for (int i = 0; i < balls.length; i++) {  // Create ball objects
     balls[i] = new Ball();
   }
   // Greeting
   fill(255, 102, 102);
-  textSize(20);
+  textSize(30);
   textAlign(CENTER);
-  text("Press P to Play", width/2, height/2);
+  text("Welcome to Ball Drop!", width/2, height/2);
+  text("Press P to Play", width/2, height/2 + 50);
 }
 
 void draw() {
@@ -28,14 +29,16 @@ void draw() {
         balls[i].draw();
       }
       // Live score counter
-      fill(0, 50, 255);
+      fill(240, 18, 190);
       textSize(20);
+      textAlign(LEFT);
       text("Score: " + scoreCounter, 50, 50);
+      text("Lives: " + lives, 50, 80);
     } else
     {
       gameState = false;
       fill(255, 102, 102);
-      textSize(20);
+      textSize(25);
       textAlign(CENTER);
       text("You scored " + scoreCounter + " points. Better luck next time!", width/2, height/2);
       textAlign(CENTER);
@@ -70,15 +73,13 @@ void ballSpeed() {  // Increase ball speed (Game difficulty)
 }
 
 
-void init() {
+void init() {  // Used for reinitializing game
   clear();
   scoreCounter = 0;
   lives = 3;
-  minSpeed = 0.5;
-  maxSpeed = 1;
-  backgroundColor = 255;
+  minSpeed = 0.8;
+  maxSpeed = 2.8;
   setup();
-  draw();
 }
 
 class Ball {
@@ -97,7 +98,7 @@ class Ball {
   }
 
   void resetBall() {  // Resets ball properties
-    this.r = random(30, 100);
+    this.r = random(50, 100);
     this.x = random(50, width - 50);
     this.y = random(-200, -100);
     this.yspeed = random(minSpeed, maxSpeed);
@@ -106,14 +107,14 @@ class Ball {
 
   void draw() {  // Draw the circle object on the screen
     y = y + yspeed;
+    stroke(255);
+    strokeWeight(3);
+    fill(col);
+    ellipse(x, y, r, r);
+
     if (y - r > height) {  // Reset circle if it goes past screen
       resetBall();
       lives--;
     }
-    // Draw circle
-    stroke(0);
-    strokeWeight(3);
-    fill(col);
-    ellipse(x, y, r, r);
   }
 }
