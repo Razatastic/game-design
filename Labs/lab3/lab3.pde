@@ -1,32 +1,84 @@
-Ball[] balls = new Ball[10];  // Array of Ball objects
+int ballCount = 5;  // Number of ball objects to be made //<>// //<>// //<>//
+Ball[] balls = new Ball[ballCount];  // Array of Ball objects
+float minSpeed = 0.8, maxSpeed = 2.8;  // Speed range of ball drop //<>//
 int scoreCounter = 0;  // Score tracker
+int lives = 3; // Number of live players has
 int backgroundColor = 255;  // Background color tracker
+boolean gameState = false;  // Boolean that determines whether or not game is running
 
 void setup() {
-  size(600, 400);
+  fullScreen();
+  background(backgroundColor);
   for (int i = 0; i < balls.length; i++) {  //Create ball objects
     balls[i] = new Ball();
   }
+  // Greeting
+  fill(255, 102, 102);
+  textSize(20);
+  textAlign(CENTER);
+  text("Press P to Play", width/2, height/2);
 }
 
 void draw() {
-  background(backgroundColor);
-  for (int i = 0; i < balls.length; i++) {
-    balls[i].draw();
+  if (gameState == true) {
+    ballSpeed();
+    background(backgroundColor);
+    if (lives !=0) {
+      for (int i = 0; i < balls.length; i++) {  // Draw ball objects
+        balls[i].draw();
+      }
+      // Live score counter
+      fill(0, 50, 255);
+      textSize(20);
+      text("Score: " + scoreCounter, 50, 50);
+    } else
+    {
+      gameState = false;
+      fill(255, 102, 102);
+      textSize(20);
+      textAlign(CENTER);
+      text("You scored " + scoreCounter + " points. Better luck next time!", width/2, height/2);
+      textAlign(CENTER);
+      text("Press Spacebar to play again", width/2, height/2 + 50);
+    }
   }
-  
-  fill(0, 50, 255);
-  textSize(20);
-  text("Score: " + scoreCounter, 50, 50);
 }
 
-void mouseReleased() {  // Mark setClicked to true on mouseRelease
+void keyPressed() {  // Start or Restart game
+  if (key == 'p' || key == 'P') {
+    gameState = true;
+  } else if (key == ' ' && gameState == false)
+  { 
+    init();
+  }
+}
+
+void mouseReleased() {  // Reset ball on mouse click and increment score
   for (Ball b : balls) {
     if (dist(mouseX, mouseY, b.x, b.y) < b.r/2) {
-      b.setClicked();
+      b.resetBall();
       scoreCounter++;
     }
   }
+}
+
+void ballSpeed() {  // Increase ball speed (Game difficulty)
+  if (scoreCounter % 10 == 0) {
+    minSpeed += 0.005;
+    maxSpeed += 0.005;
+  }
+}
+
+
+void init() {
+  clear();
+  scoreCounter = 0;
+  lives = 3;
+  minSpeed = 0.5;
+  maxSpeed = 1;
+  backgroundColor = 255;
+  setup();
+  draw();
 }
 
 class Ball {
@@ -37,37 +89,39 @@ class Ball {
   Ball() {
     // Randomly setting values for a ball object's properties
     this.r = random(30, 100);
-    this.x = random(width);
-    this.y = random(height);
-    this.yspeed = random(1, 3);
+    this.x = random(0, width);
+    this.y = random(-200, -100);
+    this.yspeed = random(minSpeed, maxSpeed);
     this.col = color(random(255), random(255), random(255));
     this.clicked = false;
   }
 
-  void setClicked() {
-    this.clicked = true;
+  void resetBall() {  // Resets ball properties
+    this.r = random(30, 100);
+    this.x = random(50, width - 50);
+    this.y = random(-200, -100);
+    this.yspeed = random(minSpeed, maxSpeed);
+    this.col = color(random(255), random(255), random(255));
   }
 
-  void draw() {
+  void draw() {  // Draw the circle object on the screen
     y = y + yspeed;
-    if (y > height) {
-      y = random(-200, -100);
-      x = random(width);
-      yspeed = random(1, 3);
+    if (y - r > height) {  // Reset circle if it goes past screen
+      resetBall();
+      lives--;
     }
-
-    if (clicked == true) {
-      stroke(255);
-      fill(255);
-      ellipse(x, y, 0, 0);
-    } else {
+    // Draw circle
+    if (backgroundColor == 255)
+    {
       stroke(0);
+      strokeWeight(3);
       fill(col);
       ellipse(x, y, r, r);
-    }
-
-    if (y < 0 - r) {
-      clicked = false;
+    } else if (backgroundColor == 0) {
+      stroke(255);
+      strokeWeight(3);
+      fill(col);
+      ellipse(x, y, r, r);
     }
   }
 }
