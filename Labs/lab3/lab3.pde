@@ -111,17 +111,9 @@ class Ball {
       lives--;
     }
     // Draw circle
-    if (backgroundColor == 255)
-    {
-      stroke(0);
-      strokeWeight(3);
-      fill(col);
-      ellipse(x, y, r, r);
-    } else if (backgroundColor == 0) {
-      stroke(255);
-      strokeWeight(3);
-      fill(col);
-      ellipse(x, y, r, r);
-    }
+    stroke(0);
+    strokeWeight(3);
+    fill(col);
+    ellipse(x, y, r, r);
   }
 }
