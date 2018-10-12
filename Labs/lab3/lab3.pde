@@ -1,23 +1,23 @@
 /* //<>//
   Made by: Abdullah Gulfam and Ahmad Raza
-  
-  Our game, "Ball Drop", involves the player clicking on balls (random in color and size) descending from the top of the screen to the bottom of the screen. 
-  The are given only three lives for the entire duration of the game. 
-  The player must click on the balls before they reach the bottom of the screen, otherwise they will lose one life for every ball that they miss. 
-  If they lose all three of their lives, the game ends and their total score is displayed. 
-  
-  The game incorporates two types of fun: challenge and submission. 
-  
-  Challenge is incorporated as harsh penalties for mistakes (not clicking a ball before it reaches the bottom of the screen) and the unrelenting descent of multiple balls
-  of various shapes and colors. The game progresses to even greater difficulty for every 10 points acquired as the balls increase in their descent speed. These elements of
-  the game motivate the player to face up to the challenges of the game as the obstacles - the limited number of lives and increasing speed of multiple balls on
-  the screen - become of greater concern as the game progresses.
-  
-  Submission is incorporated as  mind-numbingly simple game mechanics and gameplay. The only thing the player needs to do is click the balls. There's nothing else of 
-  substance to the game. Even as the balls increase in their descent speed, everything is neatly displayed in a small window so the player isn't required to track the 
-  movement of all the balls in any particularly sophisticated way. Essentially, they just stare and click, and for many people, that's enough to pass plenty of time. 
-   
-*/
+ 
+ Description:
+ Our game, "Ball Drop", involves the player clicking on balls (random in color and size) descending from the top of the screen to the bottom of the screen. 
+ The are given only three lives for the entire duration of the game. 
+ The player must click on the balls before they reach the bottom of the screen, otherwise they will lose one life for every ball that they miss. 
+ If they lose all three of their lives, the game ends and their total score is displayed. 
+ 
+ Types of Fun:  
+ 1. Challenge is incorporated as harsh penalties for mistakes (not clicking a ball before it reaches the bottom of the screen) and the unrelenting descent of multiple balls
+ of various shapes and colors. The game progresses to even greater difficulty for every 10 points acquired as the balls increase in their descent speed. These elements of
+ the game motivate the player to face up to the challenges of the game as the obstacles - the limited number of lives and increasing speed of multiple balls on
+ the screen - become of greater concern as the game progresses.
+ 
+ 2. Submission is incorporated as  mind-numbingly simple game mechanics and gameplay. The only thing the player needs to do is click the balls. There's nothing else of 
+ substance to the game. Even as the balls increase in their descent speed, everything is neatly displayed in a small window so the player isn't required to track the 
+ movement of all the balls in any particularly sophisticated way. Essentially, they just stare and click, and for many people, that's enough to pass plenty of time. 
+ 
+ */
 
 int ballCount = 5;  // Number of ball objects to be made
 Ball[] balls = new Ball[ballCount];  // Array of Ball objects
